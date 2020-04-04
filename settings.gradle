@@ -1,0 +1,2 @@
+rootProject.name='CurvedBottomNavigationView'
+include ':app'
