@@ -17,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
         CurvedBottomNavigationView mView = findViewById(R.id.customBottomBar);
       //  mView.inflateMenu(R.menu.bottom_menu);
         mView.setSelectedItemId(R.id.action_schedules);
+        mView.getMenu().findItem(R.id.action_schedules).setEnabled(false);
+
         //getting bottom navigation view and attaching the listener
         mView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -25,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.action_favorites:
                         break;
                     case R.id.action_schedules:
-                        break;
+                        return false;
                     case R.id.action_music:
                         break;
                 }

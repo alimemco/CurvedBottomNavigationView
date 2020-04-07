@@ -8,6 +8,12 @@
         android:title="Message"
         app:showAsAction="ifRoom"/>
     <item
+        android:id="@+id/action_sp"
+        android:enabled="true"
+        android:icon="@drawable/ic_mail"
+        android:title="Support"
+        app:showAsAction="ifRoom"/>
+    <item
         android:id="@+id/action_schedules"
         android:enabled="true"
         android:title=""
@@ -17,5 +23,12 @@
         android:enabled="true"
         android:icon="@drawable/ic_gear"
         android:title="Setting"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/action_2"
+        android:enabled="true"
+        android:icon="@drawable/ic_gear"
+        android:title="Notification"
         app:showAsAction="ifRoom"/>
 </menu>
