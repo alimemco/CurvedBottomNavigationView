@@ -2,61 +2,56 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FAFAFA"
     tools:context=".MainActivity">
 
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <com.alirnp.curvedbottomnavigationview.CurvedBottomNavigationView
+        android:id="@+id/customBottomBar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="60dp"
+        app:itemRippleColor="@color/colorPrimary"
+        app:labelVisibilityMode="unlabeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_menu" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lin_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/shape_circle"
+        android:clickable="true"
+        android:focusable="true"
+        android:translationZ="5dp"
+        app:layout_constraintBottom_toBottomOf="@id/customBottomBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/customBottomBar">
 
 
-        <com.alirnp.curvedbottomnavigationview.CurvedBottomNavigationView
-            android:id="@+id/customBottomBar"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/fab"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:layout_margin="12dp"
+            android:padding="6dp"
+            android:tint="@color/colorPrimary"
+            app:elevation="6dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:menu="@menu/bottom_menu" />
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/lin_id"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|center"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="@id/customBottomBar"
-            app:layout_constraintTop_toTopOf="@id/customBottomBar"
-            android:layout_marginBottom="60dp"
-            android:background="@drawable/shape_circle"
-            android:clickable="true"
-            android:focusable="true">
-
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/fab"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_centerInParent="true"
-                android:layout_margin="12dp"
-                app:srcCompat="@drawable/ic_more"
-                android:padding="6dp"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:elevation="6dp"
-                />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_more" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

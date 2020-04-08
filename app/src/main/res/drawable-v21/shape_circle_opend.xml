@@ -70,11 +70,14 @@
 
     <!-- Background Color (white) -->
     <item>
-        <shape android:shape="oval">
-            <solid android:color="@android:color/white" />
+        <ripple android:color="@color/white">
+            <item>
+                <shape android:shape="oval">
+                    <solid android:color="@color/colorPrimary" />
 
-            <corners android:radius="10dp" />
-        </shape>
-
+                    <corners android:radius="10dp" />
+                </shape>
+            </item>
+        </ripple>
     </item>
 </layer-list>
